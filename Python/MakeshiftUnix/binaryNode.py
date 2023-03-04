@@ -23,9 +23,7 @@ class Directory:
             
 
 
-            
-
-
+        
 class Node:
     def __init__(self, files : Directory):
         self.data = files
