@@ -13,20 +13,24 @@ public class Main {
 		
 		BufferedReader reader  = null;
 		String line = "";
-		
+		PokeList pokeList = new PokeList();
+		int count = 0;
 		try {
 			reader = new BufferedReader(new FileReader(file));
-			while((line = reader.readLine()) != null) {
+			line = reader.readLine();
+			while((line = reader.readLine()) != null && count < 3 ) {
 				String[] row = line.split(",");
-				
-				System.out.println(row[0]);
-				/*
-				for(String val : row) {
-					System.out.printf("%-10s", val);
-				}
-				*/
-				System.out.println("Done Reading!");
+				Pokemon poke = new Pokemon(row);
+				pokeList.addPokemon(poke);
+				//System.out.println(Arrays.toString(row));
+				count++;
 			}
+			//System.out.println(Arrays.toString(pokeList.dexEntries));
+			System.out.println(pokeList.dexEntries);
+			System.out.println("done reading");
+		
+			
+			
 			
 		}catch(Exception e) {
 			e.printStackTrace();
