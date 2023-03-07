@@ -16,7 +16,7 @@ public class Pokemon {
 	}
 	
 	public String toString() {
-		return this.id;
+		return this.name;
 	}
 	
 }

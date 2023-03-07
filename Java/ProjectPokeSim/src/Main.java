@@ -11,6 +11,14 @@ public class Main {
 		
 		String file = "pkmnDataWithFlavorText.csv";
 		
+		PokeList dex = storePokemon(file);
+
+		
+
+	}
+	
+	
+	public static PokeList storePokemon(String file) {
 		BufferedReader reader  = null;
 		String line = "";
 		PokeList pokeList = new PokeList();
@@ -24,27 +32,19 @@ public class Main {
 				pokeList.addPokemon(poke);
 				//System.out.println(Arrays.toString(row));
 				count++;
-			}
-			//System.out.println(Arrays.toString(pokeList.dexEntries));
-			System.out.println(pokeList.dexEntries);
-			System.out.println("done reading");
-		
-			
-			
-			
+			}	
 		}catch(Exception e) {
 			e.printStackTrace();
-			
-		}finally {
+		}
+		finally {
 			try {
 				reader.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
+			}
+			catch (IOException e) {	
 				e.printStackTrace();
 			}
 		}
-		
-
+		return pokeList;
 	}
 
 }
