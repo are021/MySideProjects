@@ -1,7 +1,32 @@
 from stack import *
+import random
+'''
+Difficulty 1 = Both Single Digit Numbers
+Difficulty 2 = One Double, One Single
 
-def generateProblems():
-    pass
+'''
+def generateProblems(dif, stack):
+    type = random.randint(1,2)
+
+    if dif == 1:
+        val1 = random.randint(0,9)
+        val2 = random.randint(0,9)
+    if dif == 2:
+        val1 = random.randint(0,99)
+        val2 = random.randint(0,99)
+    if dif == 3:
+        val1 = random.randint(0,999)
+        val2 = random.randint(0,999)
+
+    if type == 1:
+        return ((val1 + val2), "{} + {}".format(val1,val2))
+    elif type == 2:
+        return ((val1 - val2), "{} - {}".format(val1,val2))
+
+
+
+    
+
 
 
 def startGame(stack):
