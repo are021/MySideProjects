@@ -1,4 +1,5 @@
 from binaryNode import *
+import re
 '''
 This program emulates a simple unix terminal, using some of the basic unix commands
 
@@ -11,24 +12,28 @@ These Include
 '''
 
 def echo(userString): 
-    print(userString)
+    print(" ".join(userString))
 
-
+def callInput():
+    bashInput = input("%")
+    inputArray = re.split('[ /,\\\\/]+', bashInput)
+    return inputArray
 
 def main():
-    var = Directory()
-    var.add("hello.val.txt")
-    print(var)
-    bashInput = input("%").upper()
-    while (bashInput != "EXIT"):
-        if bashInput == "ECHO":
-            usrInput = input()
-            echo(bashInput)
+    compDirectory = Tree()
+    inputArray = callInput()
+    
+    while (inputArray[0] != "exit"):
+        if inputArray[0] == "echo":
+            echo(inputArray[1:])
 
+        elif inputArray[0] == 'pwd':
+            print()
         else:
             print("Not a Valid Input!!")
         
-        bashInput = input("%").upper()
+        inputArray = callInput()
+    
 
 if __name__ == "__main__":
     main()

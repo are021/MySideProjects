@@ -216,17 +216,11 @@ public class TicTacToe implements ActionListener {
 		buttons[b].setBackground(Color.GREEN);
 		buttons[c].setBackground(Color.GREEN);
 		
-		/*for(int i = 0; i < 9; i++) {
-			buttons[i].setEnabled(false);
-		}*/
-		textfield.setText("X wins");
 		for(int i = 0; i < 9; i++) {
-			buttons[i] = new JButton();
-			button_panel.add(buttons[i]);
-			buttons[i].setFont(new Font("MV Boli",Font.BOLD,120));
-			buttons[i].setFocusable(false);
-			buttons[i].addActionListener(this);
+			buttons[i].setEnabled(false);
 		}
+		textfield.setText("X wins");
+
 	}
 	
 	public void oWins(int a, int b, int c) {
