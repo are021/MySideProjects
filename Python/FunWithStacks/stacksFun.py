@@ -115,7 +115,7 @@ def main():
     quizStack, untilTrue, difficulty = startGame(quizStack)
     while untilTrue == False:
         quizStack, untilTrue, difficulty = startGame(quizStack)
-    t = threading.Thread(target = countdown,args= (10,))
+    t = threading.Thread(target = countdown,args= (30,))
     t.start()
     while True: 
         if quizStack.is_empty():
