@@ -6,7 +6,7 @@ These questions are simple addition, multiplication, subtraction, and division p
 
 ## To Play This Game
 
-Run this game in the Terminal by downloading the two stacks.py files. Then in terminal type 
+Run this game in the Terminal by downloading the two stacks.py files. Then in terminal type <br>
 %python3 stacksFun.py
 
 Enjoy!
