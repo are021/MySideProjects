@@ -57,7 +57,7 @@ def generateProblems(dif, stack):
 
 def countdown(t):
     global exit_condition
-    print("\n30 Seconds GOOOOOOO!")
+    print("\n30 Seconds GOOOOOOO!\n")
     while t:
         if (exit_condition):
             return
@@ -107,8 +107,6 @@ def askQuestion(answer,questionString):
     except:
         print("Wrong Answer")
         return False
-    finally:
-        print("\n")
 
 
 def main():
@@ -117,7 +115,7 @@ def main():
     quizStack, untilTrue, difficulty = startGame(quizStack)
     while untilTrue == False:
         quizStack, untilTrue, difficulty = startGame(quizStack)
-    t = threading.Thread(target = countdown,args= (30,))
+    t = threading.Thread(target = countdown,args= (10,))
     t.start()
     while True: 
         if quizStack.is_empty():
