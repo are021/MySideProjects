@@ -52,12 +52,12 @@ def generateProblems(dif, stack):
     elif type == 3:
         return ((val1 * val2), "{} * {}\n".format(val1,val2))
     else:
-        return ((val1 // val2), "{} / {}\n".format(val1,val2))
+        return ((val1 // val2), "floor({} / {})\n".format(val1,val2))
 
 
 def countdown(t):
     global exit_condition
-    print("\n30 Seconds GOOOOOOO!\n")
+    print("\n{} Seconds GOOOOOOO!\n".format(t))
     while t:
         if (exit_condition):
             return
@@ -70,8 +70,6 @@ def countdown(t):
         t -= 1
     print("Times UP! Press Enter to End!")
     
-
-
 
 def startGame(stack):
     try:
@@ -115,8 +113,10 @@ def main():
     quizStack, untilTrue, difficulty = startGame(quizStack)
     while untilTrue == False:
         quizStack, untilTrue, difficulty = startGame(quizStack)
-    t = threading.Thread(target = countdown,args= (30,))
+    print("Answer these Questions in a Row! Get one Wrong, Another Question gets Added!")
+    t = threading.Thread(target = countdown,args= (30*(pow(2,difficulty-1)),))
     t.start()
+
     while True: 
         if quizStack.is_empty():
             print("YOU WIN!")
