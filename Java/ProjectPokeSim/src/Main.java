@@ -12,10 +12,14 @@ public class Main {
 		String file = "pkmnDataWithFlavorText.csv";
 		
 		PokeList dex = storePokemon(file);
+		
+		DexFrame frame = new DexFrame();
 
 		
 
 	}
+	
+	
 	
 	
 	public static PokeList storePokemon(String file) {
