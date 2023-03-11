@@ -13,6 +13,7 @@ int factorial(int n);
 int main() 
 {
   int val;
+  printf("Input an Integer and Calculate the Factorial and Square of that Number");
   scanf("%d",&val);
   printf("The factorial of 4 is %d\n", factorial(val));
   printf("The square of 22 is %f\n", square(val));
