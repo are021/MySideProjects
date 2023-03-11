@@ -1,28 +1,19 @@
-.container{
+
+  
+  .grid {
     display: grid;
-    grid-template-columns: 200px 250px;
-    grid-auto-rows: minmax(150px,auto);
-    grid-gap:20px;
-    justify-content:space-around;
-    align-content:stretch;
-    height:100vh;
-}
-
-.item{
-    background-color: blue;
-    border-style:dotted;
-    border-color:black;
-    border-width: 10px;
-}
-
-.one{
-    grid-column: 1/-1;
-}
-
-.two{
-    grid-row:span 2;
-}
-
-.three{
-    grid-row:span 3;
-}
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    grid-gap: 5px;
+  }
+  
+  .cell {
+     /* center the cell content */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: Arial;
+    font-size: 3rem;
+    font-weight: bold;
+    background: white;
+  }
