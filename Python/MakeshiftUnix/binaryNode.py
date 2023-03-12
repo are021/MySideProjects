@@ -28,7 +28,9 @@ class Tree:
     return : none
     '''
     def __init__(self):
-        self.size = 0
+        self.size = 3
+        self.height = 1
+
         self.root = Node("/",None)
         self.root.left_child = Node("usr",None)
         self.root.right_child = Node("temp",None)
@@ -44,8 +46,28 @@ class Tree:
         pass
     def _getCurrentNode(self):
         pass
-
-
+    '''
+    Find a node recursively in the binary tree (CD)
+    '''
+    def find(self, root, ary ,i = 1):
+        
+        if root is None:
+            return None
+        elif ary[i] == self.root.left_child:
+            return self.root.left_child
+        elif ary[i] == self.root.right_child:
+            return self.root.right_child
+        
+        left = self.find(root.left_child, ary, i+1)
+        right = self.find(root.right_child, ary, i+1)
+        if left is None and right is None:
+            return None
+        elif left is not None:
+            return left
+        elif right is not None:
+            return right      
+            
+        
 class Node:
     def __init__(self, name : str , files : Directory):
         self.title = name

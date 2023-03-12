@@ -27,7 +27,7 @@ def main():
         if inputArray[0] == "echo":
             echo(inputArray[1:])
 
-        elif inputArray[0] == 'pwd':
+        elif inputArray[0] == 'cd':
             print()
         else:
             print("Not a Valid Input!!")
