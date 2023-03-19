@@ -6,6 +6,6 @@ The main research question for this project is to ask, “How can the runtime of
 
 
 Additional Sources:
-• http://www.cs.yale.edu/homes/spielman/561/2009/lect15-09.pdf
-• https://acme.byu.edu/00000179-aa18-d402-af7f-abf806ac0001/gmres2020-pdf
-• https://www.sciencedirect.com/science/article/pii/S0377042709000132
+• http://www.cs.yale.edu/homes/spielman/561/2009/lect15-09.pdf <br>
+• https://acme.byu.edu/00000179-aa18-d402-af7f-abf806ac0001/gmres2020-pdf <br>
+• https://www.sciencedirect.com/science/article/pii/S0377042709000132 <br>
