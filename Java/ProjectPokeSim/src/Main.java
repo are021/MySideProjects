@@ -31,7 +31,6 @@ public class Main {
 			while((line = reader.readLine()) != null && count < 3 ) {
 				String[] row = line.split(",");
 				Pokemon poke = new Pokemon(row);
-				System.out.println(Arrays.toString(poke.getData()));
 				pokeList.addPokemon(poke.getName(),poke.getData());
 				count++;
 			}	
