@@ -5,7 +5,7 @@ In my Linear Algebra course, we learned to solve linear systems using traditiona
 The main research question for this project is to ask, “How can the runtime of Generalized Minimal Residual algorithms be improved with a restart parameter?” For this project, I would like to compare the GMRES algorithm, and GMRES with restart algorithm, by comparing the runtime of these algorithms for very large linear systems. I will be testing the GMRES with restart algorithm by varying the restart parameters to find an ideal restart parameter. I will be generating large matrices using the Python Random library and applying these to our iterative methods. If time permits, I would also like to compare these Krylov Subspace methods runtime to other iterative methods found in the Python “scipy” library,
 
 
-Additional Sources:
+Additional Sources: <br>
 • http://www.cs.yale.edu/homes/spielman/561/2009/lect15-09.pdf <br>
 • https://acme.byu.edu/00000179-aa18-d402-af7f-abf806ac0001/gmres2020-pdf <br>
 • https://www.sciencedirect.com/science/article/pii/S0377042709000132 <br>
