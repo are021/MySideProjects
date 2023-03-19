@@ -1,16 +1,18 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class PokeList{
-	ArrayList<Pokemon> dexEntries = new ArrayList<Pokemon>();
+	
+	private HashMap<String, String[]> dexEntries;
 	
 	
 	
 	public PokeList(){
-		this.dexEntries = new ArrayList<Pokemon>();
+		this.dexEntries = new HashMap<String,String[]>();
 	}
 	
-	public void addPokemon(Pokemon pokemon) {
-		this.dexEntries.add(pokemon);
+	public void addPokemon(String name, String[] pokemon) {
+		this.dexEntries.put(name, pokemon);
 	}
 	
 }
