@@ -13,7 +13,7 @@ public class Main {
 		
 		PokeList dex = storePokemon(file);
 		
-		//DexFrame frame = new DexFrame();
+		DexFrame frame = new DexFrame(dex.getNames());
 
 	}
 	
@@ -28,8 +28,10 @@ public class Main {
 		try {
 			reader = new BufferedReader(new FileReader(file));
 			line = reader.readLine();
-			while((line = reader.readLine()) != null && count < 3 ) {
+			while((line = reader.readLine()) != null && count < 151) {
+				//System.out.println(line);
 				String[] row = line.split(",");
+				//System.out.println(row.length);
 				Pokemon poke = new Pokemon(row);
 				pokeList.addPokemon(poke.getName(),poke.getData());
 				count++;

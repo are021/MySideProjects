@@ -7,7 +7,7 @@ int main(){
     printf("Enter a string (Max Length): ");
     scanf("%s", val);
     char* reversed = reverseString(val);
-    printf("Your name is %s.", reversed);
+    printf("Your name is %s.\n\n", reversed);
     free(reversed);
     return 0;
 }
