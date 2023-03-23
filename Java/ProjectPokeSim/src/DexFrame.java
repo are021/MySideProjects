@@ -25,6 +25,12 @@ public class DexFrame extends JFrame implements ActionListener {
 	JPanel imagePanel;
 	JPanel infoPanel;
 	
+	JLabel abilities;
+	JLabel desc;
+	JLabel types;
+	JLabel id;
+	
+	
 	ImageIcon pikachu = new ImageIcon("fixed.png");
 	DexFrame(String[] pkmn){
 		
@@ -58,8 +64,22 @@ public class DexFrame extends JFrame implements ActionListener {
 		infoPanel = new JPanel();
 		infoPanel.setBackground(Color.gray);
 		infoPanel.setPreferredSize(new Dimension(250,350));
+		infoPanel.setLayout(new BorderLayout());		//Lets me adjust label locations
 		
+		id = new JLabel();
+		id.setFont(new Font("Arial",Font.BOLD,30));
+		
+		infoPanel.add(id);
 		this.add(infoPanel,BorderLayout.SOUTH);
+		
+		
+		
+		
+		
+		
+		
+		
+		////////////////JFrame///////////////////////////
 		
 		this.setTitle("My PokeDex");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -77,6 +97,7 @@ public class DexFrame extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == box) {
 			System.out.println(box.getSelectedItem());
+			id.setText("ID "+box.getSelectedItem());
 		}
 		
 	}
