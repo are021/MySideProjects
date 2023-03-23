@@ -12,11 +12,10 @@ public class Pokemon {
 	public Pokemon(String[] data) {
 		this.abilities = data[0];
 		this.name = data[30];
-		this.desc = data[41];
+		this.desc = data[41].replace('|', ',');
 		this.type1 = data[36];
 		this.type2 = data[37];
 		this.id = data[32];
-		
 		this.data = new String[]{abilities,desc,type1,type2,id};
 	}
 	

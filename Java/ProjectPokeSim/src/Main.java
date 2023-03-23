@@ -9,11 +9,11 @@ public class Main {
 		// TODO Auto-generated method stub
 		System.out.println("Gotta Catch Them All :) ");
 		
-		String file = "pkmnDataWithFlavorText.csv";
+		String file = "pkmnDataNoCommas.csv";
 		
 		PokeList dex = storePokemon(file);
 		
-		DexFrame frame = new DexFrame(dex.getNames());
+		DexFrame frame = new DexFrame(dex.getNames(),dex.getDict());
 
 	}
 	

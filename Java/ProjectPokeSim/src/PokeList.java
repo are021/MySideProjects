@@ -24,5 +24,8 @@ public class PokeList{
 	public String[] getNames() {
 		return this.namesList;
 	}
+	public HashMap<String,String[]> getDict(){
+		return dexEntries;
+	}
 	
 }
