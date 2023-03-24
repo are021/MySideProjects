@@ -28,13 +28,15 @@ public class DexFrame extends JFrame implements ActionListener {
 	JPanel infoPanel;
 	
 	JLabel abilities;
+	JLabel label2;
 	JTextArea desc;
 	JLabel types;
 	JLabel id;
 	
 	HashMap<String, String[]> dexEntries;
 	
-	
+	ImageIcon[] imageArray = makeImageArray();
+	ImageIcon bulbasaur = new ImageIcon("bulbasaur.png");
 	ImageIcon pikachu = new ImageIcon("fixed.png");
 	DexFrame(String[] pkmn, HashMap<String, String[]> dex){
 		
@@ -57,10 +59,13 @@ public class DexFrame extends JFrame implements ActionListener {
 		this.add(selectionPanel,BorderLayout.NORTH);
 		
 		///////Panel 2//////////
-		JLabel label2 = new JLabel("IS THIS WORKING???");
+		label2 = new JLabel();
 		imagePanel = new JPanel();
+		imagePanel.setLayout(new BorderLayout());
 		imagePanel.setBackground(Color.LIGHT_GRAY);
 		imagePanel.setPreferredSize(new Dimension(250,250));
+		label2.setHorizontalAlignment(JLabel.CENTER);
+		label2.setVerticalAlignment(JLabel.CENTER);
 		imagePanel.add(label2);
 		
 		this.add(imagePanel,BorderLayout.CENTER);
@@ -161,7 +166,7 @@ public class DexFrame extends JFrame implements ActionListener {
 		
 		
 		
-		
+		box.setSelectedIndex(0);
 		////////////////JFrame///////////////////////////
 		
 		this.setTitle("My PokeDex");
@@ -185,13 +190,29 @@ public class DexFrame extends JFrame implements ActionListener {
 			desc.setText(getArray(box.getSelectedItem())[1]);
 			types.setText((getArray(box.getSelectedItem())[2]) + " "+(getArray(box.getSelectedItem())[3]));
 			abilities.setText((getArray(box.getSelectedItem())[0]));
+			if (box.getSelectedIndex()<9) {
+				label2.setIcon(imageArray[box.getSelectedIndex()]);
+			}
+			
 		}
 		
 	}
 	public String[] getArray(Object object) {
 		return dexEntries.get(object);
 	}
-	
+	public ImageIcon[] makeImageArray() {
+		ImageIcon[] temp = new ImageIcon[9];
+		temp[0]= new ImageIcon("bulbasaur.png");
+		temp[1]= new ImageIcon("ivysaur.png");
+		temp[2]= new ImageIcon("venusaur.png");
+		temp[3]= new ImageIcon("charmander.png");
+		temp[4]= new ImageIcon("charmeleon.png");
+		temp[5]= new ImageIcon("charizard.png");
+		temp[6]= new ImageIcon("squirtle.png");
+		temp[7]= new ImageIcon("wartortle.png");
+		temp[8]= new ImageIcon("blastoise.png");
+		return temp;
+	}
 	
 }
 
